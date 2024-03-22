@@ -1,5 +1,12 @@
 //'use client'
 import getDomain from "@/app/lib/getDomain"
+
+// fetch caching option
+
+//force-cache
+
+// revalidate: n seconds
+//no-store
 async function getData() {
     //1 endpoint - API?
     const domain = getDomain()
