@@ -1,19 +1,23 @@
+'use client'
+import getDomain from "../lib/gitDomain"
 async function getData() {
     //1 endpoint - API?
-    // const endpoint = "http://localhost:3000/api/posts"// --. third party server
-    // const res = await fetch(endpoint)// HTTP GET
+    const domain = getDomain()
+    const endpoint = ' ${domain}/api/posts' // --. third party server
+    const res = await fetch(endpoint)// HTTP GET
 
-    // if (!res.ok) {
-    //     throw new error("Failed to fetch data")
-    // }
-    // return res.json()
-    return{items: []}
+    if (!res.ok) {
+        throw new error("Failed to fetch data")
+    }
+    return res.json()
+    //return{items: []}
 }
 
 export default async function BlogPage() {
     const data = await getData()
     const items = data && data.items ? [...data.items] : []
     console.log(items)
+    console.log(process.env.NEXT_PUBLIC_VERCEL_URL)
     return <main>
         <h1>Hello Tamrat!</h1>
         <p> Posts:</p>
