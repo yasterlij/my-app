@@ -1,5 +1,5 @@
-'use client'
-import getDomain from "../lib/gitDomain"
+//'use client'
+import getDomain from "@/app/lib/getDomain"
 async function getData() {
     //1 endpoint - API?
     const domain = getDomain()
