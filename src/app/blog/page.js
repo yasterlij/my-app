@@ -1,5 +1,5 @@
 //'use client'
-import getDomain from "@/app/lib/getDomain"
+//import getDomain from "@/app/lib/getDomain"
 
 // fetch caching option
 
@@ -9,7 +9,7 @@ import getDomain from "@/app/lib/getDomain"
 //no-store
 async function getData() {
     //1 endpoint - API?
-    const domain = getDomain()
+   // const domain = getDomain()
     const endpoint = "http://localhost:3000/api/posts" // --. third party server
     //const endpoint = '${domain}/api/posts'
     const res = await fetch(endpoint, { next: { revalidate: 10 } })// HTTP GET
