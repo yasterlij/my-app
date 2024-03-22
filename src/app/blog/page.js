@@ -10,7 +10,7 @@ import getDomain from "@/app/lib/getDomain"
 async function getData() {
     //1 endpoint - API?
     const domain = getDomain()
-    const endpoint = '${domain}/api/posts' // --. third party server
+    const endpoint = "http://localhost:3000/api/posts" // --. third party server
     const res = await fetch(endpoint, { next: { revalidate: 10 } })// HTTP GET
 
     if (!res.ok) {
