@@ -10,20 +10,20 @@
 async function getData() {
     //1 endpoint - API?
    // const domain = getDomain()
-    const endpoint = "http://localhost:3000/api/posts" // --. third party server
-    //const endpoint = '${domain}/api/posts'
-    const res = await fetch(endpoint, { next: { revalidate: 10 } })// HTTP GET
-
-    if (!res.ok) {
-        throw new error("Failed to fetch data")
-    }
-
-    if (res.headers.get("content-type") !== "application/json"){
-        return { items: [] }
-    }
+    // const endpoint = "http://localhost:3000/api/posts" // --. third party server
     
-    return res.json()
-    //return{items: []}
+    // const res = await fetch(endpoint, { next: { revalidate: 10 } })// HTTP GET
+
+    // if (!res.ok) {
+    //     throw new error("Failed to fetch data")
+    // }
+
+    // if (res.headers.get("content-type") !== "application/json"){
+    //     return { items: [] }
+    // }
+    
+    // return res.json()
+    return{items: []}
 }
 
 export default async function BlogPage() {
