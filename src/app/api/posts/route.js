@@ -6,7 +6,7 @@ export async function GET() {
         items: [
             { id: 1, title: "Meklit from api posts GET Method" },
             { id: 2, title: "Hello Tamrat" },
-            {id : 3, title: "Helo There"}
+            { id : 3, title: "Helo There"}
             
         ]})
 }
